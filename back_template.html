@@ -27,4 +27,9 @@
   synonymsDiv.parentNode.insertBefore(br, synonymsDiv.nextSibling);
   synonymsDiv.style.display = 'none';
  }
+
+ var sourceDiv = document.getElementById('source');
+ if (sourceDiv && !sourceDiv.innerHTML.trim()) {
+  sourceDiv.innerHTML = '&nbsp;';
+ }
 </script>
