@@ -1,0 +1,30 @@
+<div id="main">
+ <div id="header">
+  <span id="source">{{Source}}</span>
+  <span id="level">{{Level}}</span>
+ </div>
+ <div id="term">
+  <div id="reading">{{Reading}}</div>
+  <div id="word">{{Word}}</div>
+ </div>
+ <div id="variants">{{Variants}}</div>
+ <div id="definition">{{Definition}}</div>
+ <br>
+ <div id="synonyms">{{Synonyms}}</div>
+</div>
+
+<script>
+ var variantsDiv = document.getElementById('variants');
+ if (variantsDiv && !variantsDiv.innerHTML.trim()) {
+  var br = document.createElement('br');
+  variantsDiv.parentNode.insertBefore(br, variantsDiv.nextSibling);
+  variantsDiv.style.display = 'none';
+ }
+
+ var synonymsDiv = document.getElementById('synonyms');
+ if (synonymsDiv && !synonymsDiv.innerHTML.trim()) {
+  var br = document.createElement('br');
+  synonymsDiv.parentNode.insertBefore(br, synonymsDiv.nextSibling);
+  synonymsDiv.style.display = 'none';
+ }
+</script>
