@@ -1,35 +1,28 @@
 <div id="main">
- <div id="header">
-  <span id="source">{{Source}}</span>
-  <span id="level">{{Level}}</span>
- </div>
- <div id="term">
-  <div id="reading">{{Reading}}</div>
-  <div id="word">{{Word}}</div>
- </div>
- <div id="variants">{{Variants}}</div>
- <div id="definition">{{Definition}}</div>
- <br>
- <div id="synonyms">{{Synonyms}}</div>
+	<div id="header">
+		<span id="source">{{Source}}</span>
+		<span id="level">{{Level}}</span>
+	</div>
+	<div id="term">
+		<div id="reading">{{Reading}}</div>
+		<div id="word">{{Word}}</div>
+	</div>
+	<div id="variants">{{Variants}}</div>
+	<div id="definition">{{Definition}}</div>
+	<br />
+	<div id="synonyms">{{Synonyms}}</div>
 </div>
 
 <script>
- var variantsDiv = document.getElementById('variants');
- if (variantsDiv && !variantsDiv.innerHTML.trim()) {
-  var br = document.createElement('br');
-  variantsDiv.parentNode.insertBefore(br, variantsDiv.nextSibling);
-  variantsDiv.style.display = 'none';
- }
-
- var synonymsDiv = document.getElementById('synonyms');
- if (synonymsDiv && !synonymsDiv.innerHTML.trim()) {
-  var br = document.createElement('br');
-  synonymsDiv.parentNode.insertBefore(br, synonymsDiv.nextSibling);
-  synonymsDiv.style.display = 'none';
- }
-
- var sourceDiv = document.getElementById('source');
- if (sourceDiv && !sourceDiv.innerHTML.trim()) {
-  sourceDiv.innerHTML = '&nbsp;';
- }
+	function addBreak(divName) {
+		var div = document.getElementById(divName);
+		if (div && !div.innerHTML.trim()) {
+			var br = document.createElement("br");
+			div.parentNode.insertBefore(br, div.nextSibling);
+			div.style.display = "none";
+		}
+	}
+	addBreak("variants");
+	addBreak("synonyms");
+	addBreak("source");
 </script>
