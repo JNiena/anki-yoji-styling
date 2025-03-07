@@ -9,10 +9,10 @@
 ![](back_example.png)
 
 ### Fields Required:
-- Word
-- Reading
-- Definition
-- Variants
-- Source
-- Level
-- Synonyms
+- 四字熟語
+- 読み方
+- 意味
+- 異形
+- 出典
+- 漢検級
+- 類義語
